@@ -15,11 +15,14 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
     var bird:SKSpriteNode?
     var base:SKSpriteNode?
     var gameOverLabel:SKLabelNode?
+    var startNote:SKLabelNode?
     var scoreLabel:SKLabelNode?
     var bottomPipe1 = SKSpriteNode()
     var topPipe1 = SKSpriteNode()
     var pipeHeight = CGFloat(200)
     var start = false
+    var timer = Timer()
+    var count:Int = 0
     
 
     
@@ -29,7 +32,6 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
     override func didMove(to view: SKView) {
      
         self.physicsWorld.contactDelegate = self
-        
         base = self.childNode(withName: "base") as? SKSpriteNode
         base?.physicsBody = SKPhysicsBody(rectangleOf: (base?.size)!)
         base?.physicsBody?.affectedByGravity = false
@@ -45,12 +47,31 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
         bird?.physicsBody?.affectedByGravity = true
         bird?.physicsBody?.categoryBitMask = birdcategory
         bird?.physicsBody?.contactTestBitMask = objectcategory
-    
+        //print("properties enabled flag = \(flag)")
+        
+        
         //print("Entered FUNCTION:didMove CLASS:GameScene")
         createBackground()
         createPipe()
         
+        print(" didMove called")
+        
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(GameScene.calcTimer), userInfo: nil, repeats: true)
     }
+    
+    func updateScore(){
+        scoreLabel = SKLabelNode(fontNamed: "Chalkduster")
+        scoreLabel?.text = "Score: \(count)"
+        scoreLabel?.position = CGPoint(x: 300, y: 600)
+        addChild(scoreLabel!)
+        scoreLabel?.zPosition = 4
+    }
+    
+    @objc func calcTimer(){
+        count += 1
+        //print("count = \(count)")
+    }
+    
     func createPipe(){
         bottomPipe1 = SKSpriteNode(imageNamed: "piller")
         topPipe1 = SKSpriteNode(imageNamed: "piller")
@@ -157,13 +178,17 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
     func didBegin(_ contact: SKPhysicsContact) {
         //print("contact")
         gameOverLabel = SKLabelNode(fontNamed: "Chalkduster")
-        gameOverLabel?.text = "Game Over"
-        gameOverLabel?.fontSize = 30
+        
+        gameOverLabel?.text = "Game Over  Score: \(count)"
+        gameOverLabel?.numberOfLines = 2
+        gameOverLabel?.preferredMaxLayoutWidth = 500
+        gameOverLabel?.fontSize = 50
         gameOverLabel?.horizontalAlignmentMode = .right
-        gameOverLabel?.position = CGPoint(x: 100, y: 0)
+        gameOverLabel?.position = CGPoint(x: 200, y: 0)
         addChild(gameOverLabel!)
         gameOverLabel?.zPosition = 4
         start = false
+        timer.invalidate()
     }
     
     func touchDown(atPoint pos : CGPoint) {
@@ -172,6 +197,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
 
     func jump(){
         bird?.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 50))
+        print("bird jumping ")
     }
     
     func touchMoved(toPoint pos : CGPoint) {
@@ -183,10 +209,9 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
+        var flag = 0
         for t in touches { self.touchDown(atPoint: t.location(in: self)) }
         start = true
-        
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -206,6 +231,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
         // Called before each frame is rendered
         moveBackground()
         movePillars()
+        updateScore()
         
     }
     

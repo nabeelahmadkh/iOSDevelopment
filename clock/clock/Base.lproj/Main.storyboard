@@ -52,14 +52,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gNn-Rd-o20">
-                                        <rect key="frame" x="12.5" y="561" width="456" height="30"/>
+                                        <rect key="frame" x="12.5" y="561" width="484" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fVU-jS-5Dn">
-                                                <rect key="frame" x="0.0" y="0.0" width="456" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="484" height="30"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kxc-0Q-A6T">
-                                                        <rect key="frame" x="0.0" y="0.0" width="456" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="484" height="30"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Zoom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="piT-We-w3K">
                                                                 <rect key="frame" x="0.0" y="0.0" width="44.333333333333336" height="30"/>
@@ -68,7 +68,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="rEA-6L-OLp">
-                                                                <rect key="frame" x="52.333333333333343" y="0.0" width="405.66666666666663" height="31"/>
+                                                                <rect key="frame" x="52.333333333333343" y="0.0" width="433.66666666666663" height="31"/>
                                                                 <connections>
                                                                     <action selector="scaleSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="Jld-yK-Iqq"/>
                                                                 </connections>
@@ -224,10 +224,10 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Erb-hr-j4w">
-                                <rect key="frame" x="105" y="285" width="204" height="166"/>
+                                <rect key="frame" x="101" y="285" width="211" height="165"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bk6-LI-oLq">
-                                        <rect key="frame" x="16" y="0.0" width="172" height="118"/>
+                                        <rect key="frame" x="19.666666666666671" y="0.0" width="172" height="117"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Analog Clock"/>
                                         <connections>
@@ -235,7 +235,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcA-NF-VtU">
-                                        <rect key="frame" x="65" y="118" width="74" height="48"/>
+                                        <rect key="frame" x="68.666666666666657" y="117" width="74" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Timer"/>
                                         <connections>

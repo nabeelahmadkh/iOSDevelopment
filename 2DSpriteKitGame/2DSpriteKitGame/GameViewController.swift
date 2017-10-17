@@ -17,7 +17,7 @@ class GameViewController: UIViewController {
         
         if let view = self.view as! SKView? {
             // Load the SKScene from 'GameScene.sks'
-            if let scene = GameScene(fileNamed: "GameScene") {
+            if let scene = mainMenu(fileNamed: "mainMenu") {
                 // Set the scale mode to scale to fit the window
                 scene.scaleMode = .aspectFill
                 
@@ -38,7 +38,6 @@ class GameViewController: UIViewController {
     
     // Load this scene when touches the screen 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        /*
         if let view = self.view as! SKView? {
             // Load the SKScene from 'GameScene.sks'
             if let scene = GameScene(fileNamed: "GameScene") {
@@ -49,7 +48,6 @@ class GameViewController: UIViewController {
                 view.presentScene(scene, transition:SKTransition.crossFade(withDuration: 1.0))
             }
         }
-         */
     }
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
