@@ -12,6 +12,8 @@ import GameplayKit
 
 class GameViewController: UIViewController {
 
+    var flag:Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,14 +40,17 @@ class GameViewController: UIViewController {
     
     // Load this scene when touches the screen 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let view = self.view as! SKView? {
-            // Load the SKScene from 'GameScene.sks'
-            if let scene = GameScene(fileNamed: "GameScene") {
-                // Set the scale mode to scale to fit the window
-                scene.scaleMode = .aspectFill
-                
-                // Present the scene with a transition
-                view.presentScene(scene, transition:SKTransition.crossFade(withDuration: 1.0))
+        if flag == 0{
+            flag = 1
+            if let view = self.view as! SKView? {
+                // Load the SKScene from 'GameScene.sks'
+                if let scene = GameScene(fileNamed: "GameScene") {
+                    // Set the scale mode to scale to fit the window
+                    scene.scaleMode = .aspectFill
+                    
+                    // Present the scene with a transition
+                    view.presentScene(scene, transition:SKTransition.crossFade(withDuration: 1.0))
+                }
             }
         }
     }
