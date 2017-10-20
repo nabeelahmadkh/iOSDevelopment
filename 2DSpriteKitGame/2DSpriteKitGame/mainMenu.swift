@@ -48,16 +48,16 @@ class mainMenu: SKScene {
             scores1.text = "Top Scores: \(lastScore[0])"
         }
         if lastScore.count == 2{
-            scores1.text = "Top Scores: \(lastScore[0]) \(lastScore[1])"
+            scores1.text = "Top Scores: \(lastScore[0]), \(lastScore[1])"
         }
         if lastScore.count == 3{
-            scores1.text = "Top Scores: \(lastScore[0]) \(lastScore[1]) \(lastScore[2])"
+            scores1.text = "Top Scores: \(lastScore[0]), \(lastScore[1]), \(lastScore[2])"
         }
         if lastScore.count == 4{
-            scores1.text = "Top Scores: \(lastScore[0]) \(lastScore[1]) \(lastScore[2]) \(lastScore[3])"
+            scores1.text = "Top Scores: \(lastScore[0]), \(lastScore[1]), \(lastScore[2]), \(lastScore[3])"
         }
         if lastScore.count >= 5{
-            scores1.text = "Top Scores: \(lastScore[0]) \(lastScore[1]) \(lastScore[2]) \(lastScore[3]) \(lastScore[4])"
+            scores1.text = "Top Scores: \(lastScore[0]), \(lastScore[1]), \(lastScore[2]), \(lastScore[3]), \(lastScore[4])"
         }
         scores1.position = CGPoint(x: 0, y:-100)
         scores1.fontSize = 40

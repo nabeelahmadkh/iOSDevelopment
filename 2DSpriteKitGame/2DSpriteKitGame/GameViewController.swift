@@ -24,6 +24,8 @@ class GameViewController: UIViewController {
                 scene.scaleMode = .aspectFill
                 
                 // Present the scene
+                view.showsNodeCount = false
+                view.showsFPS = false
                 view.presentScene(scene)
             }
             
@@ -49,6 +51,8 @@ class GameViewController: UIViewController {
                     scene.scaleMode = .aspectFill
                     
                     // Present the scene with a transition
+                    view.showsNodeCount = false
+                    view.showsFPS = false
                     view.presentScene(scene, transition:SKTransition.crossFade(withDuration: 1.0))
                 }
             }

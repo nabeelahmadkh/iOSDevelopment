@@ -61,7 +61,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
         monsterNode?.physicsBody?.categoryBitMask = birdcategory
         monsterNode?.physicsBody?.contactTestBitMask = objectcategory
         self.addChild(monsterNode!)
-        let animation = SKAction.animate(with: frames, timePerFrame: 0.2)
+        let animation = SKAction.animate(with: frames, timePerFrame: 0.4)
         monsterNode?.run(SKAction.repeatForever(animation))
         
         
@@ -180,6 +180,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
                     if bp.position.x <= -400 {
                         bp.position = CGPoint(x:bp.position.x + 750, y:bp.position.y)
                     }
+                    //bp.removeFromParent()
                 }))
             
                 // moving bottom pillar
@@ -191,6 +192,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
                     if bp2.position.x <= -400 {
                         bp2.position = CGPoint(x:bp2.position.x + 750, y:bp2.position.y)
                     }
+                    //bp2.removeFromParent()
                 }))
         }
     }
@@ -208,7 +210,9 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
                     if bg.position.x <= -bg.size.width {
                         bg.position = CGPoint(x:bg.position.x + bg.size.width * 2, y:bg.position.y)
                     }
+                    //bg.removeFromParent()
                 }))
+            
         }
     }
     
@@ -220,7 +224,6 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
     
     func didBegin(_ contact: SKPhysicsContact) {
         print("did begin function called ")
-        
         gameOverLabel = SKLabelNode(fontNamed: "Chalkduster")
         gameOverLabel2 = SKLabelNode(fontNamed: "Chalkduster")
         
