@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>977777180164-23cc4n6gg5t48ace9itcfj8qb4oshqbc.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.977777180164-23cc4n6gg5t48ace9itcfj8qb4oshqbc</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBf3L2d775OJwPt1sbBI88CMfoJJSTc8G4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>977777180164</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.nbroadcast.calculator.firebaseFeaturesTest</string>
+	<key>PROJECT_ID</key>
+	<string>nabeellogintestapp</string>
+	<key>STORAGE_BUCKET</key>
+	<string>nabeellogintestapp.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:977777180164:ios:330a9420ae7602e3</string>
+	<key>DATABASE_URL</key>
+	<string>https://nabeellogintestapp.firebaseio.com</string>
+</dict>
+</plist>
