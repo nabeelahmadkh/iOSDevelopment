@@ -10,7 +10,7 @@
 		543B81277A2E91C78E22AEB2 /* Pods_smile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F21430B58C0511815B25E0 /* Pods_smile.framework */; };
 		5D2B955B1FAD685E003ECE08 /* BSImagePicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D2B955C1FAD685E003ECE08 /* BSImagePicker.framework */; };
 		5D2B955D1FAD686B003ECE08 /* DLRadioButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D2B955E1FAD686B003ECE08 /* DLRadioButton.framework */; };
-		5D2B95601FAD6ACB003ECE08 /* testViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2B955F1FAD6ACB003ECE08 /* testViewController.swift */; };
+		5D2B95601FAD6ACB003ECE08 /* uploadImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2B955F1FAD6ACB003ECE08 /* uploadImagesViewController.swift */; };
 		5D3BECD01FAD3C75003DAE9C /* signUpViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3BECCF1FAD3C75003DAE9C /* signUpViewControler.swift */; };
 		5D46E6121F9FED2D00CC3613 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D46E6111F9FED2D00CC3613 /* AppDelegate.swift */; };
 		5D46E6141F9FED2D00CC3613 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D46E6131F9FED2D00CC3613 /* ViewController.swift */; };
@@ -20,6 +20,7 @@
 		5D8F53711FA80F36006B991F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D8F53701FA80F36006B991F /* GoogleService-Info.plist */; };
 		5D9D24FA1FABC32F0091712B /* tempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9D24F91FABC32F0091712B /* tempViewController.swift */; };
 		5DA863D91FAD48CC005B09B8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DA863D81FAD48CC005B09B8 /* Images.xcassets */; };
+		5DCBD3D31FB4F718000F08C1 /* userProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCBD3D21FB4F718000F08C1 /* userProfileTableViewController.swift */; };
 		5DEC92FE1FB25A7200F694A8 /* editUserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEC92FD1FB25A7200F694A8 /* editUserProfile.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,7 +28,7 @@
 		21F21430B58C0511815B25E0 /* Pods_smile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_smile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D2B955C1FAD685E003ECE08 /* BSImagePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BSImagePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D2B955E1FAD686B003ECE08 /* DLRadioButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DLRadioButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5D2B955F1FAD6ACB003ECE08 /* testViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testViewController.swift; sourceTree = "<group>"; };
+		5D2B955F1FAD6ACB003ECE08 /* uploadImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uploadImagesViewController.swift; sourceTree = "<group>"; };
 		5D3BECCF1FAD3C75003DAE9C /* signUpViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpViewControler.swift; sourceTree = "<group>"; };
 		5D46E60E1F9FED2D00CC3613 /* smile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = smile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D46E6111F9FED2D00CC3613 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +40,7 @@
 		5D8F53701FA80F36006B991F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5D9D24F91FABC32F0091712B /* tempViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempViewController.swift; sourceTree = "<group>"; };
 		5DA863D81FAD48CC005B09B8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5DCBD3D21FB4F718000F08C1 /* userProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userProfileTableViewController.swift; sourceTree = "<group>"; };
 		5DEC92FD1FB25A7200F694A8 /* editUserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editUserProfile.swift; sourceTree = "<group>"; };
 		6127EB54E18F05572C6837B6 /* Pods-smile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smile.release.xcconfig"; path = "Pods/Target Support Files/Pods-smile/Pods-smile.release.xcconfig"; sourceTree = "<group>"; };
 		D3F0DD8D80CA39B22D7540C4 /* Pods-smile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-smile/Pods-smile.debug.xcconfig"; sourceTree = "<group>"; };
@@ -93,8 +95,9 @@
 				5D46E6231FA0172B00CC3613 /* viewUserProfile.swift */,
 				5D46E6131F9FED2D00CC3613 /* ViewController.swift */,
 				5D3BECCF1FAD3C75003DAE9C /* signUpViewControler.swift */,
-				5D2B955F1FAD6ACB003ECE08 /* testViewController.swift */,
+				5D2B955F1FAD6ACB003ECE08 /* uploadImagesViewController.swift */,
 				5D46E6151F9FED2D00CC3613 /* Main.storyboard */,
+				5DCBD3D21FB4F718000F08C1 /* userProfileTableViewController.swift */,
 				5DEC92FD1FB25A7200F694A8 /* editUserProfile.swift */,
 				5D9D24F91FABC32F0091712B /* tempViewController.swift */,
 				5D46E61A1F9FED2D00CC3613 /* LaunchScreen.storyboard */,
@@ -259,12 +262,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D2B95601FAD6ACB003ECE08 /* testViewController.swift in Sources */,
+				5D2B95601FAD6ACB003ECE08 /* uploadImagesViewController.swift in Sources */,
 				5D46E6141F9FED2D00CC3613 /* ViewController.swift in Sources */,
 				5D46E6241FA0172C00CC3613 /* viewUserProfile.swift in Sources */,
 				5D3BECD01FAD3C75003DAE9C /* signUpViewControler.swift in Sources */,
 				5D9D24FA1FABC32F0091712B /* tempViewController.swift in Sources */,
 				5D46E6121F9FED2D00CC3613 /* AppDelegate.swift in Sources */,
+				5DCBD3D31FB4F718000F08C1 /* userProfileTableViewController.swift in Sources */,
 				5DEC92FE1FB25A7200F694A8 /* editUserProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
