@@ -12,10 +12,23 @@ import Firebase
 import AVKit
 import AVFoundation
 
+class LeftPaddedTextField: UITextField {
+    
+    override func textRect(forBounds bounds: CGRect) -> CGRect {
+        return CGRect(x: bounds.origin.x + 50, y: bounds.origin.y, width: bounds.width - 70, height: bounds.height)
+    }
+    
+    override func editingRect(forBounds bounds: CGRect) -> CGRect {
+        return CGRect(x: bounds.origin.x + 50, y: bounds.origin.y, width: bounds.width - 70, height: bounds.height)
+    }
+    
+}
+
 class newviewcontroller: UIViewController{
     
     @IBOutlet weak var login: UITextField!
     @IBOutlet weak var password: UITextField!
+    
     
     @IBOutlet weak var textLabel: UILabel!
     

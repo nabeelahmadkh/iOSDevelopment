@@ -12,7 +12,6 @@
 		5DB201A11F9C6D010026EDD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB201A01F9C6D010026EDD9 /* AppDelegate.swift */; };
 		5DB201A31F9C6D010026EDD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB201A21F9C6D010026EDD9 /* ViewController.swift */; };
 		5DB201A61F9C6D010026EDD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DB201A41F9C6D010026EDD9 /* Main.storyboard */; };
-		5DB201A81F9C6D010026EDD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DB201A71F9C6D010026EDD9 /* Assets.xcassets */; };
 		5DB201AB1F9C6D020026EDD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DB201A91F9C6D020026EDD9 /* LaunchScreen.storyboard */; };
 		5DB201B31F9C70860026EDD9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DB201B21F9C70860026EDD9 /* GoogleService-Info.plist */; };
 		C03A77829FD0E3D20E4E5EF7 /* libPods-firebaseFeaturesTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8670136C529C45173FDF56D /* libPods-firebaseFeaturesTest.a */; };
@@ -26,7 +25,6 @@
 		5DB201A01F9C6D010026EDD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DB201A21F9C6D010026EDD9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5DB201A51F9C6D010026EDD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5DB201A71F9C6D010026EDD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DB201AA1F9C6D020026EDD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5DB201AC1F9C6D020026EDD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DB201B21F9C70860026EDD9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -46,6 +44,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D46E6041F9FEC9300CC3613 /* assests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = assests;
+			sourceTree = "<group>";
+		};
 		5DB201941F9C6D010026EDD9 = {
 			isa = PBXGroup;
 			children = (
@@ -67,12 +72,12 @@
 		5DB2019F1F9C6D010026EDD9 /* firebaseFeaturesTest */ = {
 			isa = PBXGroup;
 			children = (
+				5D46E6041F9FEC9300CC3613 /* assests */,
 				5DB201A01F9C6D010026EDD9 /* AppDelegate.swift */,
 				5DB201A21F9C6D010026EDD9 /* ViewController.swift */,
 				5D46E6001F9C882200CC3613 /* newviewcontroller.swift */,
 				5D46E6021F9DAFB400CC3613 /* HomePageViewController.swift */,
 				5DB201A41F9C6D010026EDD9 /* Main.storyboard */,
-				5DB201A71F9C6D010026EDD9 /* Assets.xcassets */,
 				5DB201A91F9C6D020026EDD9 /* LaunchScreen.storyboard */,
 				5DB201AC1F9C6D020026EDD9 /* Info.plist */,
 				5DB201B21F9C70860026EDD9 /* GoogleService-Info.plist */,
@@ -161,7 +166,6 @@
 			files = (
 				5DB201AB1F9C6D020026EDD9 /* LaunchScreen.storyboard in Resources */,
 				5DB201B31F9C70860026EDD9 /* GoogleService-Info.plist in Resources */,
-				5DB201A81F9C6D010026EDD9 /* Assets.xcassets in Resources */,
 				5DB201A61F9C6D010026EDD9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
