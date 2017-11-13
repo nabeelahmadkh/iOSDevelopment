@@ -24,6 +24,7 @@ class uploadImagesViewController: UIViewController{
     let ref = Database.database().reference().root
     var storageRef = Storage.storage().reference()
     @IBOutlet weak var imgView: UIImageView!
+    var numberOfImages:Int = 0
     
     
     // Selecting Multiple Images from Gallery
@@ -96,15 +97,25 @@ class uploadImagesViewController: UIViewController{
     
     
     @IBAction func uploadImages(_ sender: Any) {
+        
+        
         for i in 0..<selectedAssets{
             print("in the selected array. \(i)")
             if let imageData:Data = UIImagePNGRepresentation(imagesToUpload[i])!
             {
-                let profilePictureStorageRef = self.storageRef.child("userImages/\(user!)/images/img\(i)")
+                let profilePictureStorageRef = self.storageRef.child("userImages/\(user!)/images/img\(i+self.numberOfImages)")
+                print("I + NUMBER OF IMAGES \(i+self.numberOfImages)")
                 
                 let uploadTask = profilePictureStorageRef.putData(imageData, metadata: nil)
                 {metadata, error in
                     if error == nil{
+                        // Adding the URL of the images in the
+                        let downloadUrl = metadata!.downloadURL()
+                        print("the download link is \(downloadUrl)")
+                        self.ref.child("users").child(self.user!).child("images").child("\(i+self.numberOfImages)").setValue(downloadUrl!.absoluteString)
+                        print("The file was uploaded successsfully.")
+                        
+                        
                         let alert = UIAlertController(title: "Images Upload", message: "Your Images are successfully uploaded", preferredStyle: .alert)
                         let okaction = UIAlertAction(title: "OK", style: .default, handler: nil)
                         alert.addAction(okaction)
@@ -149,6 +160,24 @@ class uploadImagesViewController: UIViewController{
     override func viewDidLoad() {
         let user = Auth.auth().currentUser?.uid
         print("The User SIgned in is \(user))")
+        
+        
+        ref.child("users").child(user!).observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value as? NSDictionary
+            let imageurl = value?["profilePicture"] as? String ?? ""
+            
+            // Printing the URL of the stored images in the console
+            if value?["images"] != nil{
+                let images:[String] = value?["images"] as? [String] ?? [""]
+                self.numberOfImages = images.count
+                print("IMAGES .COUNT = \(self.numberOfImages)")
+            }
+            
+            print("value is \(value)")
+        }) { (error) in
+            print(error.localizedDescription)
+        }
     }
     
     

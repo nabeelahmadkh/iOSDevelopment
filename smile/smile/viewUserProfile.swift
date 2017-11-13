@@ -45,6 +45,7 @@ class viewUserData: UIViewController{
         print("The User SIgned in is \(String(describing: useremail))")
         username.text = useremail
         let uid = Auth.auth().currentUser?.uid
+        print("The user signed in as UID \(uid)")
         ref.child("users").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
             let value = snapshot.value as? NSDictionary
@@ -68,14 +69,15 @@ class viewUserData: UIViewController{
             
             
             // Printing the URL of the stored images in the console
-            let images:[String] = (value?["images"] as? [String])!
-            let numberofimages = images.count
-            i = 0
-            while(i<numberofimages){
-                print("URR for images are \(images[i])")
-                i += 1
+            if value?["images"] != nil{
+                let images:[String] = (value?["images"] as? [String])!
+                let numberofimages = images.count
+                i = 0
+                while(i<numberofimages){
+                    print("URR for images are \(images[i])")
+                    i += 1
+                }
             }
-
             
             // Setting the Profile Picture
             let url = URL(string: imageurl)

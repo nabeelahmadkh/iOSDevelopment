@@ -24,6 +24,39 @@ class userProfileTableViewController: UITableViewController,UIImagePickerControl
     @IBOutlet weak var profilePictureImageView: UIImageView!
     var imagePicker = UIImagePickerController()
     
+    @IBAction func callEmergencyContact(_ sender: Any) {
+        let number = "+13194008304"
+        
+        let formattedNumber = number.components(separatedBy:
+            NSCharacterSet.decimalDigits.inverted).joined(separator: "")
+        
+        let phoneUrl = "tel://\(formattedNumber)"
+        let url:NSURL = NSURL(string: phoneUrl)!
+        print("URLS IS \(url)")
+        
+        if #available(iOS 10, *) {
+            print("ENTERED IF CASE")
+            UIApplication.shared.open(url as URL, options: [:], completionHandler:
+                nil)
+        } else {
+            print("ENTERED ELSE CASE")
+            UIApplication.shared.openURL(url as URL)
+        }
+        
+        /*
+        if let url = URL(string: "tel://\(number)"), UIApplication.shared.canOpenURL(url) {
+            if #available(iOS 10, *) {
+                UIApplication.shared.open(url)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
+        }
+        else {
+            print("Your device doesn't support this feature.")
+        }
+        */
+    }
+    
     @IBAction func profilePictureTapped(_ sender: Any) {
         
         // Creating Action Sheet for ecting the image (Gallery & Photos)
@@ -133,12 +166,14 @@ class userProfileTableViewController: UITableViewController,UIImagePickerControl
             self.hobbiesLabel.text = hobbyOutput
         
             // Printing the URL of the stored images in the console
-            let images:[String] = (value?["images"] as? [String])!
-            let numberofimages = images.count
-            i = 0
-            while(i<numberofimages){
-                print("URR for images are \(images[i])")
-                i += 1
+            if value?["images"] != nil{
+                let images:[String] = (value?["images"] as? [String])!
+                let numberofimages = images.count
+                i = 0
+                while(i<numberofimages){
+                    print("URR for images are \(images[i])")
+                    i += 1
+                }
             }
             
             

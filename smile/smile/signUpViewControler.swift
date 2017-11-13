@@ -12,7 +12,7 @@ import Firebase
 import FirebaseDatabase
 import FirebaseStorage
 import DLRadioButton
-import DLRadioButton
+//import DLRadioButton
 
 
 
@@ -57,6 +57,10 @@ class signUpViewControler:UIViewController, UIImagePickerControllerDelegate, UIN
     var box1Checked:Bool = false
     @IBOutlet weak var checkBox2: UIButton!
     var box2Checked:Bool = false
+    @IBOutlet weak var checkBox3: UIButton!
+    var box3Checked:Bool = false
+    @IBOutlet weak var checkBox4: UIButton!
+    var box4Checked:Bool = false
     @IBOutlet weak var nameTextField: LeftPaddedTextField2!
     @IBOutlet weak var maleRadioButton: DLRadioButton!
     @IBOutlet weak var femaleRadioButton: DLRadioButton!
@@ -65,12 +69,15 @@ class signUpViewControler:UIViewController, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var hobbylabel2: UILabel!
     @IBOutlet weak var hobbylabel1: UILabel!
     @IBOutlet weak var hobbylabel: UILabel!
+    var hobbyLabels:[String] = ["Travel", "Technology", "Pets" , "Science"]
+    
     
     //Male Female Radio Button Selected
     @IBAction func femaleRadioButtonPressed(_ sender: Any) {
         print("Female Radio Button Selected")
         sexButton = "Female"
     }
+    
     @IBAction func maleRadioButtonPressed(_ sender: Any) {
         print("Male Radio Button Selected")
         sexButton = "Male"
@@ -97,12 +104,12 @@ class signUpViewControler:UIViewController, UIImagePickerControllerDelegate, UIN
     @IBAction func buttonPressed(_ sender: UIButton) {
         if box1Checked == false{
             checkBox1.setImage(checkBox, for: UIControlState.normal)
-            hobbies.append("Technology")
+            hobbies.append(hobbyLabels[0])
             box1Checked = true
         }
         else{
             checkBox1.setImage(uncheckBox, for: UIControlState.normal)
-            if let index = hobbies.index(of: "Technology"){
+            if let index = hobbies.index(of: hobbyLabels[0]){
                 hobbies.remove(at: index)
             }
             box1Checked = false
@@ -114,15 +121,47 @@ class signUpViewControler:UIViewController, UIImagePickerControllerDelegate, UIN
     @IBAction func button2Pressed(_ sender: UIButton) {
         if box2Checked == false{
             checkBox2.setImage(checkBox, for: UIControlState.normal)
-            hobbies.append("Travel")
+            hobbies.append(hobbyLabels[1])
             box2Checked = true
         }
         else{
             checkBox2.setImage(uncheckBox, for: UIControlState.normal)
-            if let index = hobbies.index(of: "Travel") {
+            if let index = hobbies.index(of: hobbyLabels[1]) {
                 hobbies.remove(at: index)
             }
             box2Checked = false
+        }
+        print("value of hobbies is \(hobbies)")
+    }
+    
+    @IBAction func button3Pressed(_ sender: UIButton) {
+        if box3Checked == false{
+            checkBox3.setImage(checkBox, for: UIControlState.normal)
+            hobbies.append(hobbyLabels[2])
+            box3Checked = true
+        }
+        else{
+            checkBox3.setImage(uncheckBox, for: UIControlState.normal)
+            if let index = hobbies.index(of: hobbyLabels[2]) {
+                hobbies.remove(at: index)
+            }
+            box3Checked = false
+        }
+        print("value of hobbies is \(hobbies)")
+    }
+    
+    @IBAction func button4Pressed(_ sender: UIButton) {
+        if box4Checked == false{
+            checkBox4.setImage(checkBox, for: UIControlState.normal)
+            hobbies.append(hobbyLabels[3])
+            box4Checked = true
+        }
+        else{
+            checkBox4.setImage(uncheckBox, for: UIControlState.normal)
+            if let index = hobbies.index(of: hobbyLabels[3]) {
+                hobbies.remove(at: index)
+            }
+            box4Checked = false
         }
         print("value of hobbies is \(hobbies)")
     }
@@ -326,26 +365,35 @@ class signUpViewControler:UIViewController, UIImagePickerControllerDelegate, UIN
     // Runs at first when the Image View Controller Loads.
     override func viewDidLoad() {
         // Assinging Font, Size & Color to the TextFields
-        usernameTextField.font = UIFont(name: "ChalkboardSE-Bold", size: 18.0)
-        usernameTextField.textColor = UIColor.white
+        //usernameTextField.font = UIFont(name: "ChalkboardSE-Bold", size: 18.0)
+        //usernameTextField.textColor = UIColor.black
+        //usernameTextField.attributedPlaceholder = NSAttributedString(string: "UserName [Email]", attributes: [NSAttributedStringKey.foregroundColor: UIColor.darkGray])
+        usernameTextField = ComponentFormatter().setLabel(usernameTextField, 18, UIColor.black, UIColor.darkGray, "UserName [Email]")
         
         signUpTextLabel.font = UIFont(name: "ChalkboardSE-Bold", size: 24.0)
-        signUpTextLabel.textColor = UIColor.white
+        signUpTextLabel.textColor = UIColor.black
         
-        passwordTextField.font = UIFont(name: "ChalkboardSE-Bold", size: 18.0)
-        passwordTextField.textColor = UIColor.white
+        //passwordTextField.font = UIFont(name: "ChalkboardSE-Bold", size: 18.0)
+        //passwordTextField.textColor = UIColor.black
+        passwordTextField = ComponentFormatter().setLabel(passwordTextField, 18, UIColor.black, UIColor.darkGray, "Password")
         
-        confirmPasswordTextField.font = UIFont(name: "ChalkboardSE-Bold", size: 18.0)
-        confirmPasswordTextField.textColor = UIColor.white
+        //confirmPasswordTextField.font = UIFont(name: "ChalkboardSE-Bold", size: 18.0)
+        //confirmPasswordTextField.textColor = UIColor.black
+        confirmPasswordTextField = ComponentFormatter().setLabel(confirmPasswordTextField, 18, UIColor.black, UIColor.darkGray, "Confirm Password")
         
         sexLabel.font = UIFont(name: "ChalkboardSE-Bold", size: 18.0)
-        sexLabel.textColor = UIColor.white
+        sexLabel.textColor = UIColor.black
         
         mobileTextField.font = UIFont(name: "ChalkboardSE-Bold", size: 18.0)
-        mobileTextField.textColor = UIColor.white
+        mobileTextField.textColor = UIColor.black
         
-        dateOfBirthTextField.font = UIFont(name: "ChalkboardSE-Bold", size: 18.0)
-        dateOfBirthTextField.textColor = UIColor.white
+        nameTextField = ComponentFormatter().setLabel(nameTextField, 18, UIColor.black, UIColor.darkGray, "Name")
+        
+        //dateOfBirthTextField.font = UIFont(name: "ChalkboardSE-Bold", size: 18.0)
+        //dateOfBirthTextField.textColor = UIColor.black
+        dateOfBirthTextField = ComponentFormatter().setLabel(dateOfBirthTextField, 18, UIColor.black, UIColor.darkGray, "DOB [DD/MM/YYYY]")
+        
+        mobileTextField = ComponentFormatter().setLabel(mobileTextField, 18, UIColor.black, UIColor.darkGray, "Mobile NUmber")
         
         signUpConfirmationLabel.font = UIFont(name: "ChalkboardSE-Bold", size: 18.0)
         signUpConfirmationLabel.textColor = UIColor.red
@@ -365,24 +413,30 @@ class signUpViewControler:UIViewController, UIImagePickerControllerDelegate, UIN
         femaleRadioButton.titleLabel?.font = UIFont(name: "ChalkboardSE-Bold", size: 16.0)
         femaleRadioButton.tintColor = UIColor.black
         
-        nameTextField.font = UIFont(name: "ChalkboardSE-Bold", size: 18.0)
-        nameTextField.textColor = UIColor.white
+        //nameTextField.font = UIFont(name: "ChalkboardSE-Bold", size: 18.0)
+        //nameTextField.textColor = UIColor.white
         
         hobbylabel.font = UIFont(name: "ChalkboardSE-Bold", size: 18.0)
         hobbylabel.textColor = UIColor.black
         
-        hobbylabel1.font = UIFont(name: "ChalkboardSE-Bold", size: 18.0)
-        hobbylabel1.textColor = UIColor.black
+        //hobbylabel1.font = UIFont(name: "ChalkboardSE-Bold", size: 18.0)
+        //hobbylabel1.textColor = UIColor.black
+        hobbylabel1 = ComponentFormatter().setLabel(hobbylabel1, 18, UIColor.black)
+        hobbylabel1.text = hobbyLabels[0]
         
-        hobbylabel2.font = UIFont(name: "ChalkboardSE-Bold", size: 18.0)
-        hobbylabel2.textColor = UIColor.black
+        //hobbylabel2.font = UIFont(name: "ChalkboardSE-Bold", size: 18.0)
+        //hobbylabel2.textColor = UIColor.black
+        
+        hobbylabel2 = ComponentFormatter().setLabel(hobbylabel2, 18, UIColor.black)
+        hobbylabel2.text = hobbyLabels[1]
         
         hobbylabel3.font = UIFont(name: "ChalkboardSE-Bold", size: 18.0)
         hobbylabel3.textColor = UIColor.black
+        hobbylabel3.text = hobbyLabels[2]
         
         hobbylabel4.font = UIFont(name: "ChalkboardSE-Bold", size: 18.0)
         hobbylabel4.textColor = UIColor.black
-        
+        hobbylabel4.text = hobbyLabels[3]
         
     }
     
@@ -391,4 +445,6 @@ class signUpViewControler:UIViewController, UIImagePickerControllerDelegate, UIN
         // Dispose of any resources that can be recreated.
     }
 }
+
+
 

@@ -11,6 +11,6 @@ target 'smile' do
   pod 'Firebase/Storage'
   pod 'DLRadioButton', '~> 1.4'
   pod 'BSImagePicker', '~> 2.4'
+  pod 'INSPhotoGallery'
   # Pods for smile
-
 end

@@ -32,6 +32,10 @@ class editUserProfile:UIViewController{
     var box1Checked:Bool = false
     @IBOutlet weak var checkBox2: UIButton!
     var box2Checked:Bool = false
+    @IBOutlet weak var checkBox3: UIButton!
+    var box3Checked:Bool = false
+    @IBOutlet weak var checkBox4: UIButton!
+    var box4Checked:Bool = false
     var checkBox = UIImage(named: "checked")
     var uncheckBox = UIImage(named: "unchecked")
     var hobbies = [String]()
@@ -41,6 +45,10 @@ class editUserProfile:UIViewController{
     @IBOutlet weak var mobileTextField: UITextField!
     @IBOutlet weak var maleRadioButton: DLRadioButton!
     @IBOutlet weak var femaleRadioButton: DLRadioButton!
+    @IBOutlet weak var hobbyLabel1: UILabel!
+    @IBOutlet weak var hobbyLabel2: UILabel!
+    @IBOutlet weak var hobbyLabel3: UILabel!
+    @IBOutlet weak var hobbyLabel4: UILabel!
     
     
     //Male Female Radio Button Selected
@@ -57,12 +65,12 @@ class editUserProfile:UIViewController{
     @IBAction func buttonPressed(_ sender: UIButton) {
         if box1Checked == false{
             checkBox1.setImage(checkBox, for: UIControlState.normal)
-            hobbies.append("Technology")
+            hobbies.append(signUpViewControler().hobbyLabels[0])
             box1Checked = true
         }
         else{
             checkBox1.setImage(uncheckBox, for: UIControlState.normal)
-            if let index = hobbies.index(of: "Technology"){
+            if let index = hobbies.index(of: signUpViewControler().hobbyLabels[0]){
                 hobbies.remove(at: index)
             }
             box1Checked = false
@@ -74,12 +82,12 @@ class editUserProfile:UIViewController{
     @IBAction func button2Pressed(_ sender: UIButton) {
         if box2Checked == false{
             checkBox2.setImage(checkBox, for: UIControlState.normal)
-            hobbies.append("Travel")
+            hobbies.append(signUpViewControler().hobbyLabels[1])
             box2Checked = true
         }
         else{
             checkBox2.setImage(uncheckBox, for: UIControlState.normal)
-            if let index = hobbies.index(of: "Travel") {
+            if let index = hobbies.index(of: signUpViewControler().hobbyLabels[1]) {
                 hobbies.remove(at: index)
             }
             box2Checked = false
@@ -87,7 +95,39 @@ class editUserProfile:UIViewController{
         print("value of hobbies is \(hobbies)")
     }
     
+    @IBAction func button3Pressed(_ sender: UIButton) {
+        if box3Checked == false{
+            checkBox3.setImage(checkBox, for: UIControlState.normal)
+            hobbies.append(signUpViewControler().hobbyLabels[2])
+            box3Checked = true
+        }
+        else{
+            checkBox3.setImage(uncheckBox, for: UIControlState.normal)
+            if let index = hobbies.index(of: signUpViewControler().hobbyLabels[2]) {
+                hobbies.remove(at: index)
+            }
+            box3Checked = false
+        }
+        print("value of hobbies is \(hobbies)")
+    }
     
+    @IBAction func button4Pressed(_ sender: UIButton) {
+        if box4Checked == false{
+            checkBox4.setImage(checkBox, for: UIControlState.normal)
+            hobbies.append(signUpViewControler().hobbyLabels[3])
+            box4Checked = true
+        }
+        else{
+            checkBox4.setImage(uncheckBox, for: UIControlState.normal)
+            if let index = hobbies.index(of: signUpViewControler().hobbyLabels[3]) {
+                hobbies.remove(at: index)
+            }
+            box4Checked = false
+        }
+        print("value of hobbies is \(hobbies)")
+    }
+    
+    /*
     // Selecting Multiple Images from Gallery
     @IBAction func addImagesClicked(_ sender: Any) {
         
@@ -180,7 +220,7 @@ class editUserProfile:UIViewController{
             }
         }
     }
-    
+    */
     
     @IBAction func logoutUser(_ sender: UIButton) {
         let firebaseAuth = Auth.auth()
@@ -203,7 +243,7 @@ class editUserProfile:UIViewController{
     
     @IBAction func updateUserProfile(_ sender: Any) {
         // Upload images if any
-        uploadImages()
+        //uploadImages()
         
         // Uploading User Profile Data
         let sexLabel = sexButton
@@ -232,6 +272,12 @@ class editUserProfile:UIViewController{
     }
     
     override func viewDidLoad() {
+        // Assigning Hobby Labels
+        hobbyLabel1.text = signUpViewControler().hobbyLabels[0]
+        hobbyLabel2.text = signUpViewControler().hobbyLabels[1]
+        hobbyLabel3.text = signUpViewControler().hobbyLabels[2]
+        hobbyLabel4.text = signUpViewControler().hobbyLabels[3]
+        
         let user = Auth.auth().currentUser?.uid
         usernameTextField.isUserInteractionEnabled = false
         print("The User SIgned in is \(user))")
@@ -261,21 +307,34 @@ class editUserProfile:UIViewController{
             var i = 0
             self.checkBox1.setImage(self.uncheckBox, for: UIControlState.normal)
             self.checkBox2.setImage(self.uncheckBox, for: UIControlState.normal)
+            self.checkBox3.setImage(self.uncheckBox, for: UIControlState.normal)
+            self.checkBox4.setImage(self.uncheckBox, for: UIControlState.normal)
             while(i < length){
                 hobbyOutput.append(hobby[i])
                 hobbyOutput.append(", ")
                 
-                if hobby[i] == "Technology"{
+                if hobby[i] == signUpViewControler().hobbyLabels[0]{
                     self.checkBox1.setImage(self.checkBox, for: UIControlState.normal)
                     self.box1Checked = true
-                    self.hobbies.append("Technology")
+                    self.hobbies.append(signUpViewControler().hobbyLabels[0])
                 }
-                
 
-                if hobby[i] == "Travel"{
+                if hobby[i] == signUpViewControler().hobbyLabels[1]{
                     self.checkBox2.setImage(self.checkBox, for: UIControlState.normal)
                     self.box2Checked = true
-                    self.hobbies.append("Travel")
+                    self.hobbies.append(signUpViewControler().hobbyLabels[1])
+                }
+                
+                if hobby[i] == signUpViewControler().hobbyLabels[2]{
+                    self.checkBox2.setImage(self.checkBox, for: UIControlState.normal)
+                    self.box2Checked = true
+                    self.hobbies.append(signUpViewControler().hobbyLabels[2])
+                }
+                
+                if hobby[i] == signUpViewControler().hobbyLabels[3]{
+                    self.checkBox2.setImage(self.checkBox, for: UIControlState.normal)
+                    self.box2Checked = true
+                    self.hobbies.append(signUpViewControler().hobbyLabels[3])
                 }
                 
                 i += 1

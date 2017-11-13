@@ -16,21 +16,21 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>2</integer>
 		</dict>
 		<key>BSImagePicker.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 		<key>DLRadioButton.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>3</integer>
 		</dict>
 		<key>GTMSessionFetcher.xcscheme</key>
 		<dict>
@@ -44,35 +44,49 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>4</integer>
 		</dict>
-		<key>Pods-smile.xcscheme</key>
+		<key>INSPhotoGallery-INSPhotoGallery.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>8</integer>
+			<integer>7</integer>
 		</dict>
-		<key>UIImageViewModeScaleAspect.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>9</integer>
-		</dict>
-		<key>leveldb-library.xcscheme</key>
+		<key>INSPhotoGallery.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
+		<key>Pods-smile.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>10</integer>
+		</dict>
+		<key>UIImageViewModeScaleAspect.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>11</integer>
+		</dict>
+		<key>leveldb-library.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
 		<key>nanopb.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>7</integer>
+			<integer>9</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>

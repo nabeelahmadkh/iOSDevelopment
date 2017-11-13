@@ -17,7 +17,11 @@
 		5D46E6171F9FED2D00CC3613 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D46E6151F9FED2D00CC3613 /* Main.storyboard */; };
 		5D46E61C1F9FED2D00CC3613 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D46E61A1F9FED2D00CC3613 /* LaunchScreen.storyboard */; };
 		5D46E6241FA0172C00CC3613 /* viewUserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D46E6231FA0172B00CC3613 /* viewUserProfile.swift */; };
+		5D6C1D001FB7F091003568B7 /* galleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6C1CFF1FB7F091003568B7 /* galleryViewController.swift */; };
 		5D8F53711FA80F36006B991F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D8F53701FA80F36006B991F /* GoogleService-Info.plist */; };
+		5D8F8A901FB8028E002EB7B7 /* ImagePreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8F8A8F1FB8028E002EB7B7 /* ImagePreviewVC.swift */; };
+		5D8F8A921FB90177002EB7B7 /* addNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8F8A911FB90177002EB7B7 /* addNumberViewController.swift */; };
+		5D8F8A941FB91A85002EB7B7 /* ComponentFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8F8A931FB91A85002EB7B7 /* ComponentFormatter.swift */; };
 		5D9D24FA1FABC32F0091712B /* tempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9D24F91FABC32F0091712B /* tempViewController.swift */; };
 		5DA863D91FAD48CC005B09B8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DA863D81FAD48CC005B09B8 /* Images.xcassets */; };
 		5DCBD3D31FB4F718000F08C1 /* userProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCBD3D21FB4F718000F08C1 /* userProfileTableViewController.swift */; };
@@ -37,7 +41,11 @@
 		5D46E61B1F9FED2D00CC3613 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D46E61D1F9FED2D00CC3613 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D46E6231FA0172B00CC3613 /* viewUserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewUserProfile.swift; sourceTree = "<group>"; };
+		5D6C1CFF1FB7F091003568B7 /* galleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = galleryViewController.swift; sourceTree = "<group>"; };
 		5D8F53701FA80F36006B991F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5D8F8A8F1FB8028E002EB7B7 /* ImagePreviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImagePreviewVC.swift; path = /Users/nabeel/Documents/Developer/iOSdevelopement/smile/smile/ImagePreviewVC.swift; sourceTree = "<absolute>"; };
+		5D8F8A911FB90177002EB7B7 /* addNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addNumberViewController.swift; sourceTree = "<group>"; };
+		5D8F8A931FB91A85002EB7B7 /* ComponentFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentFormatter.swift; sourceTree = "<group>"; };
 		5D9D24F91FABC32F0091712B /* tempViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempViewController.swift; sourceTree = "<group>"; };
 		5DA863D81FAD48CC005B09B8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5DCBD3D21FB4F718000F08C1 /* userProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userProfileTableViewController.swift; sourceTree = "<group>"; };
@@ -95,9 +103,13 @@
 				5D46E6231FA0172B00CC3613 /* viewUserProfile.swift */,
 				5D46E6131F9FED2D00CC3613 /* ViewController.swift */,
 				5D3BECCF1FAD3C75003DAE9C /* signUpViewControler.swift */,
+				5D8F8A931FB91A85002EB7B7 /* ComponentFormatter.swift */,
 				5D2B955F1FAD6ACB003ECE08 /* uploadImagesViewController.swift */,
 				5D46E6151F9FED2D00CC3613 /* Main.storyboard */,
+				5D8F8A911FB90177002EB7B7 /* addNumberViewController.swift */,
 				5DCBD3D21FB4F718000F08C1 /* userProfileTableViewController.swift */,
+				5D6C1CFF1FB7F091003568B7 /* galleryViewController.swift */,
+				5D8F8A8F1FB8028E002EB7B7 /* ImagePreviewVC.swift */,
 				5DEC92FD1FB25A7200F694A8 /* editUserProfile.swift */,
 				5D9D24F91FABC32F0091712B /* tempViewController.swift */,
 				5D46E61A1F9FED2D00CC3613 /* LaunchScreen.storyboard */,
@@ -217,6 +229,7 @@
 				"${BUILT_PRODUCTS_DIR}/DLRadioButton/DLRadioButton.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/INSPhotoGallery/INSPhotoGallery.framework",
 				"${BUILT_PRODUCTS_DIR}/UIImageViewModeScaleAspect/UIImageViewModeScaleAspect.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -228,6 +241,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLRadioButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/INSPhotoGallery.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIImageViewModeScaleAspect.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -263,12 +277,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D2B95601FAD6ACB003ECE08 /* uploadImagesViewController.swift in Sources */,
+				5D8F8A921FB90177002EB7B7 /* addNumberViewController.swift in Sources */,
+				5D8F8A901FB8028E002EB7B7 /* ImagePreviewVC.swift in Sources */,
 				5D46E6141F9FED2D00CC3613 /* ViewController.swift in Sources */,
+				5D6C1D001FB7F091003568B7 /* galleryViewController.swift in Sources */,
 				5D46E6241FA0172C00CC3613 /* viewUserProfile.swift in Sources */,
 				5D3BECD01FAD3C75003DAE9C /* signUpViewControler.swift in Sources */,
 				5D9D24FA1FABC32F0091712B /* tempViewController.swift in Sources */,
 				5D46E6121F9FED2D00CC3613 /* AppDelegate.swift in Sources */,
 				5DCBD3D31FB4F718000F08C1 /* userProfileTableViewController.swift in Sources */,
+				5D8F8A941FB91A85002EB7B7 /* ComponentFormatter.swift in Sources */,
 				5DEC92FE1FB25A7200F694A8 /* editUserProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
